@@ -1,0 +1,21 @@
+{
+  "name": "next-img-docs",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && touch out/.nojekyll",
+    "build:webpack": "next build --webpack && touch out/.nojekyll",
+    "clean": "rm -rf .next && rm -rf out",
+    "start": "next dev",
+    "release:docs": "npm run clean && npm run build && gh-pages -d out -t"
+  },
+  "dependencies": {
+    "js-beautify": "^2.0.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-syntax-highlighter": "^16.1.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "next": "^16.3.8"
+  }
+}
